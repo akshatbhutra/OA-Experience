@@ -2,6 +2,8 @@
 
 24 August 2025 - Gave Online Assessement of SD-1 role at Wokelo AI. (CoderByte Platform)
 
+[About company - Gen-AI powered investment research platform for automating complex research workflows like due diligence, sector research, and portfolio monitoring.]
+
 Questions:
 
 A) MCQ Questions
