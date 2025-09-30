@@ -1,0 +1,76 @@
+Q. In the context of distributed systems, what is the main benefit of using a consistent hashing algorithm?
+
+It minimizes the amount of data that needs to be redistributed when nodes are added or removed.
+
+
+Q. When designing a system with high availability, which redundancy technique involves creating multiple instances of the same component to handle requests in parallel?
+
+The redundancy technique you’re describing is called active-active redundancy.
+
+Q. What is the primary purpose of using a message queue in a distributed system?
+
+The primary purpose of using a message queue in a distributed system is to decouple components and enable asynchronous communication.
+
+Q. What is a common technique for reducing the impact of the `N+1 query problem` in database-driven applications?
+
+A common technique to reduce the impact of the N+1 query problem is eager loading (also called preloading).
+
+Q. In a distributed system, how can you achieve eventual consistency?
+
+In a distributed system, eventual consistency is achieved by ensuring that all replicas of a piece of data will converge to the same value over time, even if updates happen asynchronously.
+
+Q. What is a common reason to implement sharding in a distributed database system?
+
+
+A common reason to implement sharding in a distributed database system is to improve scalability by distributing data across multiple machines (shards) so that no single database node becomes a bottleneck.
+
+Q. Which of the following is an example of vertical scaling?
+
+👉 Upgrading a single server by adding more CPU, RAM, or faster storage so it can handle a larger workload.
+
+Q. In a distributed system, which technique can be used to achieve fault tolerance?
+
+In a distributed system, a common technique to achieve fault tolerance is replication.
+
+Q. Which of the following is a common use case for implementing a publish-subscribe pattern in a distributed system?
+
+👉 Event-driven communication, such as sending notifications or broadcasting updates to multiple subscribers.
+
+Q. Which of the following is a key advantage of using a NoSQL database over a traditional relational database?
+
+👉 Ability to scale horizontally and handle large volumes of unstructured or semi-structured data.
+
+A company is developing a highly available web application using stateless web servers. Which TWO services are suitable for storing session state data?
+
+
+Q. For a highly available web application with stateless web servers, the session state must be stored in a centralized, durable, and highly available service (not on the individual servers).
+
+✅ Two suitable services are:
+
+Distributed Cache (e.g., Redis, Memcached, AWS ElastiCache, Azure Cache for Redis)
+
+Stores session state in memory for fast access.
+
+Replication + clustering provide high availability.
+
+Database (e.g., Amazon DynamoDB, Azure Cosmos DB, relational DB with HA setup)
+
+Provides durable storage for session state.
+
+Useful if sessions must survive cache evictions or restarts.
+
+Q. Company salespeople upload their sales figures daily. A Solutions Architect needs a durable storage solution for these documents that also protects against users accidentally deleting important documents. Which action will protect against unintended user actions?
+
+
+Enable storage versioning (e.g., S3 Versioning) to protect documents from accidental deletions or overwrites while maintaining durability.
+
+Q. An application requires a highly available relational database with an initial storage capacity of 8 TB. The database will grow by 8 GB every day.To support expected traffic, at least eight read replicas will be required to handle database reads. Which option will meet these requirements?
+
+Use Amazon Aurora (MySQL- or PostgreSQL-compatible) with Multi-AZ deployment. It supports the 8 TB+ initial size, auto-scales storage as the DB grows, and allows up to 15 read replicas for read scaling.
+
+Q. A Solutions Architect is designing a critical business application with a relational database that runs on an EC2 instance.It requires a single EBS volume that can support up to 16, 000 IOPS. Which Amazon EBS volume type can meet the performance requirements of this application?
+
+ince the application is critical business workload (relational DB) and explicitly needs 16,000 IOPS guaranteed, the safest and most common choice is:
+
+✅ Amazon EBS Provisioned IOPS SSD (io1 or io2)
+
