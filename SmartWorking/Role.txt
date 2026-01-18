@@ -1,0 +1,42 @@
+Front End Software Developer (Mid-level) (Remote, Full-Time) [HR132]
+
+
+This is a mid-level Front End Software Developer role focused entirely on building and maintaining high-quality user-facing features for a large-scale digital learning platform. The position is 100% front-end, with a strong emphasis on modern JavaScript and React, accessibility, performance, and maintainable code.
+
+
+
+You’ll work on an ongoing product, contributing to applications used by national governments, global enterprises, and healthcare organisations. The role sits at the heart of product delivery, supporting millions of learners worldwide through reliable, accessible, and user-centred interfaces.
+
+
+
+Responsibilities
+Design, build, and maintain high-quality front-end features using modern JavaScript and React
+Deliver features and enhancements aligned to product roadmaps and sprint goals, with a strong focus on usability, performance, and code quality
+Work collaboratively with product, UX/UI, QA, and backend engineers to translate requirements into well-designed solutions
+Own the implementation of simple to moderately complex user stories, from development through testing and deployment
+Identify, investigate, and resolve front-end bugs and issues efficiently
+Contribute to testing, code reviews, and continuous improvement within an Agile and DevOps delivery environment
+Maintain and improve front-end standards, patterns, and best practices to support long-term scalability and maintainability
+
+
+Requirements
+2+ years of experience with JavaScript and React, building production front-end features
+2+ years of experience with front-end fundamentals, including HTML, CSS, responsive design, and accessibility
+1+ year of experience writing or contributing to unit tests (e.g. Jest), with an understanding of testable code
+1+ year of experience using Git or other version control systems in a team environment
+Experience delivering features in an Agile development workflow
+Strong collaboration skills and the ability to work effectively within cross-functional teams
+
+
+Nice to have
+Awareness of DevOps / CI pipelines and how front-end code moves through delivery pipelines
+Experience deploying or supporting live, production applications
+Exposure to testing approaches beyond unit testing (e.g. end-to-end testing)
+
+
+Benefits
+Fixed Shifts: 12:00 PM - 9:30 PM IST (Summer) | 1:00 PM - 10:30 PM IST (Winter)
+No Weekend Work: Real work-life balance, not just words
+Day 1 Benefits: Laptop and full medical insurance provided
+Support That Matters:Mentorship, community, and forums where ideas are shared
+True Belonging: A long-term career where your contributions are valued
