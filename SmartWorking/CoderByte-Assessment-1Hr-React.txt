@@ -1,0 +1,311 @@
+
+
+### 1. Which lifecycle method is unsafe in concurrent mode?
+
+**Answer:**
+`componentWillMount`, `componentWillReceiveProps`, `componentWillUpdate` are unsafe. Use `componentDidMount`, `getDerivedStateFromProps`, and `getSnapshotBeforeUpdate` instead.
+
+---
+
+### 2. Best way to optimize large lists in React
+
+**Answer:**
+Use `React.memo`, `useMemo`, `useCallback`, virtualization (`react-window` or `react-virtualized`), key props for stable identity, and lazy loading for rendering only visible items.
+
+---
+
+### 3. Which hook should not be called unconditionally?
+
+**Answer:**
+Hooks must be called **unconditionally at the top level**. Don’t call hooks inside loops, conditions, or nested functions. Conditional calls break the hooks order.
+
+---
+
+### 4. What is hydration in React?
+
+**Answer:**
+Hydration is when React attaches event listeners to **server-rendered HTML** (SSR) to make it interactive on the client.
+
+---
+
+### 5. What is a closure in JavaScript?
+
+**Answer:**
+A closure is a function that **remembers the variables from its outer scope** even after that outer function has finished executing.
+
+---
+
+### 6. What will `typeof null` return?
+
+**Answer:**
+`"object"` (a known historical bug in JavaScript).
+
+---
+
+### 7. In concurrent mode, React may discard renders because?
+
+**Answer:**
+React 18 concurrent mode may discard or restart renders to **prioritize more important updates** or to **optimize performance**.
+
+---
+
+### 8. Which React feature helps prevent waterfall problem in data fetching?
+
+**Answer:**
+`Suspense` and `concurrent features` allow **parallel fetching and rendering**, reducing waterfall delays.
+
+---
+
+### 9. Why should side effects not be placed inside reducers?
+
+**Answer:**
+Reducers must be **pure functions**. Side effects inside reducers break predictability and can lead to bugs in state updates.
+
+---
+
+### 10. Methods part of `ReactDOM`
+
+**Answer:**
+
+* `ReactDOM.render()`
+* `ReactDOM.createRoot()`
+* `ReactDOM.hydrate()`
+* `ReactDOM.createPortal()`
+
+---
+
+### 11. Main risk of state closures in hooks
+
+**Answer:**
+State closures can capture **stale state** if not using functional updates, leading to bugs.
+
+---
+
+### 12. Why `useLayoutEffect` should be avoided on server
+
+**Answer:**
+It runs **synchronously after render**. On server, no DOM exists, so it will cause warnings. Use `useEffect` for server-safe logic.
+
+---
+
+### 13. Which change forces remount instead of rerender?
+
+**Answer:**
+Changing the **`key` prop** of a component forces a remount.
+
+---
+
+### 14. Which lifecycle behavior does `useEffect(() => {})` replace?
+
+**Answer:**
+`useEffect` replaces `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` (cleanup function).
+
+---
+
+### 15. Default behavior of React regarding XSS protection
+
+**Answer:**
+React **escapes values by default** when rendering JSX, preventing XSS attacks.
+
+---
+
+### 16. Bug example:
+
+```jsx
+const ref = useRef(0)
+ref = 5 // ❌ error, cannot reassign ref
+```
+
+**Answer:**
+`ref` is **immutable reference object**. You can update `ref.current`, but not `ref` itself.
+
+---
+
+### 17. When is calling a hook valid?
+
+**Answer:**
+
+* Only at the **top level** of a functional component or custom hook
+* **Never** inside loops, conditions, or nested functions
+
+---
+
+### 18. In React 18 dev mode, effects run how many times?
+
+**Answer:**
+React 18 **double-invokes effects in Strict Mode** to detect side effects.
+
+---
+
+### 19. `useTransition` helps with
+
+**Answer:**
+Marking updates as **non-urgent**, improving **UI responsiveness for transitions**.
+
+---
+
+### 20. Best way to avoid derived state
+
+**Answer:**
+Compute values **on-the-fly in render** or use **memoized computations (`useMemo`)** instead of storing derived state.
+
+---
+
+### 21. What is a controlled component?
+
+**Answer:**
+A controlled component is one whose **form element value is controlled by React state**, e.g., `<input value={state} onChange={...} />`.
+
+---
+
+### 22. Which HTML element is semantic?
+
+**Answer:**
+`<header>`, `<main>`, `<footer>`, `<article>`, `<section>` are semantic elements because they convey meaning.
+
+---
+
+### 23. Which unit is relative to root?
+
+**Answer:**
+`rem` — relative to the `<html>` root font size.
+
+---
+
+### 24. Best pattern to share logic across components
+
+**Answer:**
+
+* **HOCs (Higher-Order Components)**
+* **Custom Hooks**
+* **Render Props**
+
+---
+
+### 25. When `setState` is called inside `render()` what happens?
+
+**Answer:**
+Causes **infinite loop** → component keeps re-rendering → “Maximum update depth exceeded” error.
+
+---
+
+### 26. Modal breaks layout due to z-index. Best fix?
+
+**Answer:**
+Render modal via **React Portal** outside main DOM hierarchy, ensuring it’s not constrained by parent stacking contexts.
+
+---
+
+### 27. What happens when you call `setState` multiple times synchronously in React 18?
+
+**Answer:**
+React 18 **automatically batches** synchronous state updates → triggers **single re-render**.
+
+---
+
+### 28. What if you return different hook order in subsequent renders?
+
+**Answer:**
+React breaks the hooks system → state may mismatch → runtime errors. Hook order must remain **stable**.
+
+---
+
+### 29. Difference between `useEffect` and `useLayoutEffect`
+
+**Answer:**
+
+* `useEffect` → runs **after paint** (async), non-blocking
+* `useLayoutEffect` → runs **before paint**, blocking, used for DOM measurements or layout updates
+
+---
+
+### 30. In `React.memo`, what if you don’t provide comparison function?
+
+**Answer:**
+React uses **shallow comparison of props** by default.
+
+---
+
+### 31. Correct way to handle errors in React component
+
+**Answer:**
+
+* **Render-time errors:** Use **Error Boundaries (`componentDidCatch`)**
+* **Async / event errors:** Use **try-catch inside `useEffect` or event handlers**
+
+---
+
+### 32. Code coverage mean
+
+**Answer:**
+Percentage of code executed by tests, helping identify untested parts of the code.
+
+---
+
+### 33. Hoisting in JavaScript
+
+**Answer:**
+JS moves **declarations** (variables and functions) to the top of their scope. Variables declared with `var` are hoisted as `undefined`; `let`/`const` are in **temporal dead zone**.
+
+---
+
+### 34. Accessibility in web development
+
+**Answer:**
+Making web apps usable by **everyone**, including people with disabilities, following **WCAG guidelines**.
+
+---
+
+### 35. Lifting state up
+
+**Answer:**
+Move state to the **closest common parent** so multiple children can share and update it consistently.
+
+---
+
+### 36. Context API solves
+
+**Answer:**
+**Prop drilling** — lets you share state or data across the component tree without passing props through every intermediate component.
+
+---
+
+### 37. Lifecycle phase `useEffect` replaces
+
+**Answer:**
+`componentDidMount`, `componentDidUpdate`, `componentWillUnmount`
+
+---
+
+### 38. Why state should not be mutated directly
+
+**Answer:**
+Mutating state directly **prevents React from detecting changes**, leading to inconsistent UI and bugs. Always use `setState` / state setters.
+
+---
+
+### 39. Strict Mode purpose
+
+**Answer:**
+Detects **unsafe lifecycles, side-effects, deprecated APIs**, and double-invokes effects in development to help write resilient code.
+
+---
+
+### 40. How to conditionally render components to handle multiple states
+
+**Answer:**
+
+* `if` statements
+* Ternary operators
+* Logical `&&`
+* `switch` statements
+* Map state to components for scalable patterns
+
+---
+
+### 41. Use of HOC
+
+**Answer:**
+HOC (Higher-Order Component) **wraps a component to reuse logic**, inject props, or add behavior like authentication, theming, or logging.
+
+
