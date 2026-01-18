@@ -1,0 +1,5 @@
+Citadel Securities Software Engineer Application Test.
+
+Duration: 75 min
+
+Problems: 1 (C++ code)
