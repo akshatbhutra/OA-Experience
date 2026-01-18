@@ -1,5 +1,29 @@
 Citadel Securities Software Engineer Application Test.
 
+C++ Software Engineer 
+
+Role Overview:
+
+We’re looking for driven innovators and optimizers who are excited about cutting-edge technology and making a measurable impact. If you’re passionate, obsessed with performance, and excited to work where nanoseconds matter.
+
+Responsibilities:
+
+Solve What Matters: Break down intricate challenges and deliver clear, elegant solutions that drive real world outcomes
+Build and Scale: Design, build and maintain high performance systems that are the backbone of our trading infrastructure
+Optimize Everything: Continuously push the limits of latency, reliability, and throughput in a distributed environment
+Partner and Deliver: Collaborate directly with traders, researchers, and fellow engineers to deliver ideas into production
+Own it in production: Take pride in running your code live - Monitoring, supporting and improving it every day
+
+
+Qualifications:
+
+Deep experience in C++ with a passion for clean, performant code
+A strong grasp of multithreading, concurrency, and distributed systems
+Curiosity to explore how things work and a drive to improve them
+Clear, thoughtful communication and the ability to thrive in a high ownership environment
+Bachelor’s (or higher) degree in a Computer Science, Engineering or related field
+Background in Trading or finance is a plus but not a requirement
+
 Duration: 75 min
 
 Problems: 1 (C++ code)
