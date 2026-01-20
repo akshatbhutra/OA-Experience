@@ -1,14 +1,11 @@
-import numpy as np
-from sklearn.metrics import classification_report, roc_auc_score
+from sklearn.metrics import classification_report, f1_score
 
-def evaluate_model(model, X_test, y_test):
-    preds = model.predict(X_test)
-    proba = model.predict_proba(X_test)
+def evaluate_model(model, X_test, y_test, return_f1=False):
+    y_pred = model.predict(X_test)
+    print("📊 Classification Report:\n", classification_report(y_test, y_pred))
+    
+    f1 = f1_score(y_test, y_pred)
+    print(f"F1-score: {f1:.4f}")
 
-    # Ensure proba has two columns
-    if proba.shape[1] == 1:
-        proba = np.concatenate([1 - proba, proba], axis=1)
-
-    print("📊 Classification Report:")
-    print(classification_report(y_test, preds))
-    print("ROC-AUC:", roc_auc_score(y_test, proba[:, 1]))
+    if return_f1:
+        return f1
