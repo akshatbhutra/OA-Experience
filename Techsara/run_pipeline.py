@@ -1,7 +1,12 @@
 from src.train import train_model
 from src.evaluate import evaluate_model
 import joblib
+import os
+from datetime import datetime
+import csv
 
+os.makedirs("logs", exist_ok=True)
+log_file = "logs/model_metrics.csv"
 print("🚀 Starting Churn ML Pipeline...")
 
 # Step 1: Train candidate model
@@ -24,5 +29,17 @@ if f1_new >= f1_base:
     joblib.dump(model, "models/churn_model.pkl")  # overwrite baseline
     print("✅ New model passes quality gate. Deployed!")
 else:
-    joblib.dump(model, "models/candidate_model.pkl")  # archive candidate
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    os.makedirs("models/candidates", exist_ok=True)
+    joblib.dump(model, f"models/candidates/candidate_{timestamp}.pkl")
     print("❌ Candidate model rejected. Baseline retained.")
+
+os.makedirs("logs", exist_ok=True)
+log_file = "logs/model_metrics.csv"
+
+# Append metrics for this run
+with open(log_file, mode="a", newline="") as f:
+    writer = csv.writer(f)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    writer.writerow([timestamp, f1_new])
