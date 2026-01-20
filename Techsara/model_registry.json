@@ -1,0 +1,7 @@
+{
+  "model_name": "churn_model",
+  "version": "1.0.0",
+  "metric": "roc_auc",
+  "metric_value": 0.78,
+  "path": "models/production/model.joblib"
+}
