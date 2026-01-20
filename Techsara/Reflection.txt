@@ -1,0 +1,4 @@
+
+C. Reflection
+
+Using a coding assistant helped move faster, especially for repetitive tasks like generating boilerplate FastAPI endpoints, preprocessing code, and modular pipeline structure. It occasionally suggested incorrect imports or circular dependencies, which required manual debugging. The assistant was most useful in creating structured API code, error handling, and column alignment for predictions. It was least helpful in deciding which MLOps extensions to implement, as those required domain understanding and context-specific decisions. Overall, the assistant accelerated development, reduced syntax errors, and helped me focus on designing a reproducible and deployable ML workflow
