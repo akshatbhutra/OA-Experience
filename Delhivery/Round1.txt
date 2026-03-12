@@ -1,0 +1,93 @@
+Delhivery -- 1st round -- 3 march 2026
+Interviewer: Anand Kumar Pandey, Time: 1:15 minutes
+
+Questions:
+
+
+DSA Q: Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+http://leetcode.com/problems/top-k-frequent-elements/description/
+
+ SQL question: What is SQL injection?
+
+Q. Review the following code:
+
+# Make sure that sensitive details like open ai key are maintained in env files
+# for checking redundancy, set data structures must be preferred over list / array data structures.
+# 2 prompts: user prompt, system prompt are there for system and we should keep seperate to ensure safety and prevent toxic prompts
+# try catch use for error handling and making system fault tolerant.
+# 
+
+import requests
+import json
+
+def process_and_correct_utterance(
+    user_input: str,
+    recent_queries: list,
+    openai_key: str = "sk-proj-T5b89zQ2_example_key_do_not_use" # .env file, congig file
+):
+    """
+    AI-generated function to deduplicate recent queries and use an LLM
+    to perform context correction and grammatical rating on user input.
+    """
+    # 1. Deduplicate recent queries based on query text
+    # naive
+    # list comprehension
+
+    # recent_queries = [
+        {
+            # "text": ""Dsfdsfdf"
+        }
+    ]
+    unique_queries = set()
+    for query in recent_queries:
+        duplicate_found = False
+        for u_query in unique_queries:
+            if query.get("text") == u_query.get("text"):
+                duplicate_found = True
+                break
+        if not duplicate_found:
+            unique_queries.append(query)
+
+    # Format context history
+    history_text = ", ".join([q.get("text", "") for q in unique_queries])
+
+    # 2. Construct the prompt
+    system_prompt = (
+        "You are a strict grammar assistant. Score the grammatical correctness "
+        "of the user input from 1 to 10 and correct the context based on history. "
+        f"History: {history_text}. "
+        f"User Input: {user_input}"
+    )
+
+    # not toxic,
+
+# SQL Injection
+# 
+
+    headers = {
+        "Authorization": f"Bearer {openai_key}",
+        "Content-Type": "application/json"
+    }
+
+    payload = {
+        "model": "gpt-4",
+        "messages": [{"role": "system", "content": system_prompt}]
+    }
+
+    # 3. Call the API
+    response = requests.post(
+        "https://api.openai.com/v1/chat/completions",
+        headers=headers,
+        json=payload
+    )
+
+# error handling / excpetion 
+
+    return response.json()
+
+and test the understanding of whatever work you have done.
+
+
+
+
+

@@ -1,0 +1,8 @@
+Company: Delhivery
+When: 10 March 2026 (3-4 PM)
+Who: Devendra Ratnam
+
+Q1: Design Book My Show. (Design, Concurrency, Database choice and why, SQL query for finding for a specific user the movie name, screen and show time)
+
+
+
