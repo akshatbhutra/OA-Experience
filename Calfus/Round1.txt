@@ -1,0 +1,8 @@
+Company: Calfus Senior Software Engineer (Python)
+Interviewer: Avadoot Narvekar
+HR: Samuel Raj Kumar 
+Date: 3 March 2026 
+
+========================================================
+
+Q:  FastAPI / Flask https://jsonplaceholder.typicode.com/todos and write GET APIs to get all items, get item by user id and title test using Postman
