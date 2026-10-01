@@ -1,0 +1,34 @@
+Assignment:
+Design the implementation approach for the AccountSignal Portfolio Page shown in the attached: AccountSignal_Portfolio_Page.png
+
+The page is intended to provide public Financial Services intelligence across multiple institutions, with selected opportunity intelligence available to subscribers.
+
+Primary Data Input
+Citizens 2 - Business Priorities and Budget Release Logic.json
+
+This JSON represents intelligence for one institution — Citizens Financial Group. Citizens 2 - Business Priorities and Budget Release Logic
+
+Assume that equivalent JSON outputs will be generated for many other institutions such as Commerce Bank and Synovus. Your design should therefore support multiple institutions and increasing data volume, rather than being specific to Citizens.
+
+Additional Reference Material
+I am also providing the following to help you understand the existing AccountSignal application:
+
+Current Platform Functions.doc — screenshots of the current application, including account, opportunity and opportunity-detail functionality. The opportunity detail screens illustrate the type of intelligence currently presented to subscribers. Current Platform Functions
+
+Citizens 8A Final Opportunity Packaging_2026-09-03.json — representative production JSON for opportunity intelligence. It includes structured opportunity IDs, classifications, continuity, scope, buyer mapping and other pursuit intelligence. Citizens 8A Final Opportunity …
+
+Citizens Opportunity Data.xlsx — representative subset of how opportunity JSON data is currently extracted and stored in the database.
+
+These files are provided primarily as context for the current platform and data structure. The Portfolio Page is the feature you should design.
+
+Expected Deliverables
+Please provide:
+
+High-level solution architecture — frontend, backend/API, database and major components.
+Database design — proposed tables/entities, key relationships and how you would support multiple institutions, signals and related opportunities.
+Data ingestion approach — how the supplied JSON would be validated, transformed and loaded/updated in the database.
+Application/API design — how the Portfolio Page would retrieve data and support search, filtering and public vs. subscriber content.
+Development approach — how you would structure and implement the feature within an existing production application.
+Dev → QA → Production approach — environments, testing, deployment, migration and rollback considerations.
+Key technical decisions and assumptions — including scalability, security, performance and maintainability.
+Please include diagrams or schemas where they help explain your approach. Working code is not required unless you believe a small prototype or code sample materially demonstrates your approach.

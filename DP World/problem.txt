@@ -1,0 +1,30 @@
+Container Yard Placement Optimizer — Hiring Assessment                                                                                                             
+
+  This is a 48-hour technical assessment where you need to build a container placement algorithm for a port terminal yard.                                           
+
+  The Problem                                                                                                                                                       
+
+  - A port terminal has 10 blocks with a total capacity of 9,600 container slots (3D grids: bays x rows x tiers)                                                     
+  - Containers arrive (DISCHARGE from ships, TRUCK_RECV from gates) and leave (LOAD to ships, TRUCK_DLVR to gates)
+  - Your job: decide where to place each incoming container to minimize reshuffles — containers that must be moved out of the way when retrieving a target container
+  buried in a stack                                                                                                                                                 
+
+  Data                                                                                                                                                               
+
+  - 40 days of synthetic terminal data, split into train (days 1-20) and test (days 21-40), ~20k events each                                                         
+  - Vessel schedule with ETAs/ETDs provided
+  - Key signals: departure_time, port_of_discharge, weight_class                                                                                                     
+
+  What You Need to Deliver: Pick any research paper in this area from the last 5-6 years, and implement it to improve reshuffles for this problem
+
+YOU ARE FREE TO USE CLAUDE CODE OR CODEX OR ANY TOOL FOR THIS PROBLEM, IN FACT YOU ARE ENCOURAGED TO USE THEM                                                                                                                                           
+  1. solution/ — Your placement strategy (implement PlacementStrategy interface)                                                                                     
+  2. docs/design.md — 1-3 page design document                   
+  3. results/ — Test set output                                                                                                                                     
+  4. Optionally: unit tests                                                                                                                                         
+
+  Current State                                                                                                                                                     
+
+  - The scaffold is fully built: simulator, scoring, yard state manager, event reader, baselines                                                                     
+  - solution/ and docs/ and results/ directories are empty — nothing has been implemented yet
+  - Two baselines exist: RandomStrategy and GreedyStrategy (lowest-stack first-fit)  
