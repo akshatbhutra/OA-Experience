@@ -1,0 +1,36 @@
+{
+  "name": "accountsignal-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate:fixtures": "tsx scripts/validate-fixtures.ts",
+    "dev": "concurrently -k \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "tsx apps/api/src/server.ts",
+    "dev:web": "npm --prefix apps/web run dev",
+    "build": "npm run validate:fixtures && tsc -b && npm --prefix apps/web run build",
+    "test": "npm run validate:fixtures && vitest run",
+    "test:e2e": "npm run build",
+    "start": "node apps/api/dist/server.js"
+  },
+  "dependencies": {
+    "@fluentui/react-components": "^9.69.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonrepair": "^3.12.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
+    "vitest": "^3.1.2"
+  }
+}

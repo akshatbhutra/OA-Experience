@@ -1,0 +1,5 @@
+{
+  "extends":"../../tsconfig.json",
+  "compilerOptions":{"outDir":"dist","rootDir":"../..","composite":true,"noEmit":false},
+  "include":["src/**/*.ts","../../packages/contracts/src/**/*.ts"]
+}

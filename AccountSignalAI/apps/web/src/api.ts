@@ -1,0 +1,3 @@
+import type { OpportunityDetail, SignalResponse } from '../../../packages/contracts/src/portfolio';
+export async function getSignals(params: URLSearchParams): Promise<SignalResponse> { const response = await fetch(`/api/v1/portfolio/signals?${params}`); if (!response.ok) throw new Error('Unable to load signals.'); return response.json(); }
+export async function getOpportunity(signalId: string, subscriber: boolean): Promise<OpportunityDetail> { const response = await fetch(`/api/v1/portfolio/signals/${signalId}/opportunity`, { headers: subscriber ? { 'x-demo-entitlement': 'subscriber' } : {} }); if (!response.ok) throw new Error((await response.json()).message ?? 'Subscriber access required.'); return response.json(); }
